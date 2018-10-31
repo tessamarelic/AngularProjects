@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
+  showChoice = 'recipe';
+
+  selection(choice: string){
+    this.showChoice = choice;
+  }
 }

@@ -1,10 +1,11 @@
-<app-header></app-header>
+<app-header (selected)= "selection($event)"></app-header>
 
 <div class ="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipe-book></app-recipe-book>
-      <app-shopping-list></app-shopping-list>
+      
+      <app-recipe-book *ngIf="this.showChoice === 'recipe'"></app-recipe-book>
+      <app-shopping-list *ngIf="this.showChoice != 'recipe'"></app-shopping-list>
     </div>
   </div>
 </div>
